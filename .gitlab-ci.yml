@@ -16,18 +16,12 @@ molecule:
   retry: 1
   parallel:
     matrix:
-      - image: "debian"
-        tag: "bullseye"
       - image: "fedora"
         tag: "34"
       - image: "fedora"
         tag: "latest"
       - image: "fedora"
         tag: "rawhide"
-      - image: "ubuntu"
-        tag: "latest"
-      - image: "ubuntu"
-        tag: "bionic"
 
 testing:
   script:
@@ -37,22 +31,12 @@ testing:
   retry: 1
   parallel:
     matrix:
-      - image: "debian"
-        tag: "latest"
-      - image: "enterpriselinux"
-        tag: "latest"
       - image: "fedora"
         tag: "34"
       - image: "fedora"
         tag: "latest"
       - image: "fedora"
         tag: "rawhide"
-      - image: "opensuse"
-        tag: "latest"
-      - image: "ubuntu"
-        tag: "latest"
-      - image: "ubuntu"
-        tag: "bionic"
 
 galaxy:
   script:
