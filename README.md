@@ -4,7 +4,7 @@ Install and configure mysql on your system.
 
 |GitHub|GitLab|Quality|Downloads|Version|
 |------|------|-------|---------|-------|
-|[![github](https://github.com/buluma/ansible-role-mysql/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-mysql/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-mysql/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-mysql)|[![quality](https://img.shields.io/ansible/quality/57921)](https://galaxy.ansible.com/buluma/mysql)|[![downloads](https://img.shields.io/ansible/role/d/57921)](https://galaxy.ansible.com/buluma/mysql)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-mysql.svg)](https://github.com/buluma/ansible-role-mysql/releases/)|
+|[![github](https://github.com/buluma/ansible-role-mysql/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-mysql/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-mysql/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-mysql/-/commits/master)|[![quality](https://img.shields.io/ansible/quality/57921)](https://galaxy.ansible.com/buluma/mysql)|[![downloads](https://img.shields.io/ansible/role/d/57921)](https://galaxy.ansible.com/buluma/mysql)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-mysql.svg)](https://github.com/buluma/ansible-role-mysql/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
