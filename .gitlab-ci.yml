@@ -12,7 +12,32 @@ molecule:
   script:
     - image=${image} tag=${tag} molecule test
   rules:
-    - if: $CI_COMMIT_REF_NAME == "main"
+    - if: $CI_COMMIT_REF_NAME == "master"
+  retry: 1
+  parallel:
+    matrix:
+      - image: "debian"
+        tag: "latest"
+      - image: "enterpriselinux"
+        tag: "latest"
+      - image: "fedora"
+        tag: "34"
+      - image: "fedora"
+        tag: "latest"
+      - image: "fedora"
+        tag: "rawhide"
+      - image: "opensuse"
+        tag: "latest"
+      - image: "ubuntu"
+        tag: "latest"
+      - image: "ubuntu"
+        tag: "bionic"
+
+testing:
+  script:
+    - image=${image} tag=${tag} molecule test
+  rules:
+    - if: $CI_COMMIT_REF_NAME == "testing"
   retry: 1
   parallel:
     matrix:
