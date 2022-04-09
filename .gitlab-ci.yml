@@ -17,7 +17,7 @@ molecule:
   parallel:
     matrix:
       - image: "debian-systemd"
-        tag: "latest"
+        tag: "11"
       - image: "enterpriselinux"
         tag: "latest"
       - image: "fedora-systemd"
