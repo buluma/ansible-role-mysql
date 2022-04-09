@@ -16,7 +16,7 @@ molecule:
   retry: 1
   parallel:
     matrix:
-      - image: "debian-systemd"
+      - image: "debian"
         tag: "11"
       - image: "enterpriselinux"
         tag: "latest"
