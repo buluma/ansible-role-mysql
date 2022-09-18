@@ -27,7 +27,7 @@
         name: "{{ netstat_package }}"
         state: present
       notify:
-        - remove netstat
+        - Remove netstat
 
     - name: Check if mysql is bound to 127.0.0.1
       ansible.builtin.command:
