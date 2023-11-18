@@ -1,4 +1,4 @@
-# [mysql](#mysql)
+# [Ansible role mysql](#mysql)
 
 Install and configure mysql on your system.
 
