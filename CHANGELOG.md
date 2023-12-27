@@ -6,6 +6,7 @@
 
 **Closed issues:**
 
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#27](https://github.com/buluma/ansible-role-mysql/issues/27)
 - Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#24](https://github.com/buluma/ansible-role-mysql/issues/24)
 - Update action [\#23](https://github.com/buluma/ansible-role-mysql/issues/23)
 
