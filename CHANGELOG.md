@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-mysql/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-mysql/compare/1.1.0...HEAD)
+
+**Merged pull requests:**
+
+- Bump release-drafter/release-drafter from 5 to 6 [\#29](https://github.com/buluma/ansible-role-mysql/pull/29) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [1.1.0](https://github.com/buluma/ansible-role-mysql/tree/1.1.0) (2024-01-28)
 
 [Full Changelog](https://github.com/buluma/ansible-role-mysql/compare/1.0.9...1.1.0)
