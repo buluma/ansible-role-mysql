@@ -4,6 +4,7 @@
 _mysql_name:
   default: mariadb
   RedHat-8: mysql
+  RedHat-9: mysql
   Amazon-2018: mysql
 
 mysql_name: "{{ _mysql_name[ansible_os_family ~ '-' ~ ansible_distribution_major_version] | default(_mysql_name['default'] ) }}"
@@ -35,6 +36,9 @@ _mysql_packages:
     - "{{ mysql_name }}-server"
     - "{{ mysql_name }}-devel"
     - python3-PyMySQL
+  RedHat-9:
+    - "{{ mysql_name }}-server"
+    - python3-PyMySQL
 
 mysql_packages: "{{ _mysql_packages[ansible_os_family ~ '-' ~ ansible_distribution_major_version] | default(_mysql_packages[ansible_os_family] | default(_mysql_packages['default'] )) }}"
 
@@ -56,20 +60,6 @@ _mysql_socket:
   RedHat: /var/lib/mysql/mysql.sock
 
 mysql_socket: "{{ _mysql_socket[ansible_os_family] | default(_mysql_socket['default']) }}"
-
-mysql_configuration_options:
-  - option: bind-address
-    section: mysqld
-    value: "{{ mysql_bind_address }}"
-  - option: socket
-    section: mysqld
-    value: "{{ mysql_socket }}"
-  - section: mysqld
-    option: innodb_buffer_pool_size
-    value: "{{ mysql_innodb_buffer_pool_size }}"
-  - section: mysqld
-    option: innodb_io_capacity
-    value: "{{ mysql_innodb_io_capacity }}"
 
 _mysql_configuration_destination:
   default: /etc/mysql/mariadb.conf.d
