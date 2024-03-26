@@ -50,14 +50,11 @@
 
 - set concurrency [\#14](https://github.com/buluma/ansible-role-mysql/pull/14) ([buluma](https://github.com/buluma))
 - Bump actions/checkout from 2.4.0 to 3 [\#13](https://github.com/buluma/ansible-role-mysql/pull/13) ([dependabot[bot]](https://github.com/apps/dependabot))
+- version bump/focal [\#12](https://github.com/buluma/ansible-role-mysql/pull/12) ([buluma](https://github.com/buluma))
 
 ## [1.0.4](https://github.com/buluma/ansible-role-mysql/tree/1.0.4) (2022-02-12)
 
 [Full Changelog](https://github.com/buluma/ansible-role-mysql/compare/1.0.3...1.0.4)
-
-**Merged pull requests:**
-
-- version bump/focal [\#12](https://github.com/buluma/ansible-role-mysql/pull/12) ([buluma](https://github.com/buluma))
 
 ## [1.0.3](https://github.com/buluma/ansible-role-mysql/tree/1.0.3) (2022-02-06)
 
