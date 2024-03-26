@@ -5,35 +5,35 @@
     that:
       - mysql_bind_address is defined
       - mysql_bind_address is string
-    quiet: yes
+    quiet: true
 
 - name: assert | Test if mysql_root_password is set correctly
   ansible.builtin.assert:
     that:
       - mysql_root_password is defined
       - mysql_root_password is string
-    quiet: yes
+    quiet: true
 
 - name: assert | Test if mysql_innodb_buffer_pool_size is set correctly
   ansible.builtin.assert:
     that:
       - mysql_innodb_buffer_pool_size is defined
       - mysql_innodb_buffer_pool_size is string
-    quiet: yes
+    quiet: true
 
 - name: assert | Test if mysql_innodb_io_capacity is set correctly
   ansible.builtin.assert:
     that:
       - mysql_innodb_io_capacity is defined
       - mysql_innodb_io_capacity is integer
-    quiet: yes
+    quiet: true
 
 - name: assert | Test item.name item in mysql_databases is set correctly
   ansible.builtin.assert:
     that:
       - item.name is defined
       - item.name is string
-    quiet: yes
+    quiet: true
   loop: "{{ mysql_databases }}"
   loop_control:
     label: "{{ item.name }}"
@@ -45,7 +45,7 @@
     that:
       - item.state is string
       - item.state in [ "absent", "dump", "import", "present" ]
-    quiet: yes
+    quiet: true
   loop: "{{ mysql_databases }}"
   loop_control:
     label: "{{ item.name }}"
@@ -57,7 +57,7 @@
   ansible.builtin.assert:
     that:
       - item.target is string
-    quiet: yes
+    quiet: true
   loop: "{{ mysql_databases }}"
   loop_control:
     label: "{{ item.name }}"
@@ -69,7 +69,7 @@
   ansible.builtin.assert:
     that:
       - item.encoding is string
-    quiet: yes
+    quiet: true
   loop: "{{ mysql_databases }}"
   loop_control:
     label: "{{ item.name }}"
@@ -81,7 +81,7 @@
   ansible.builtin.assert:
     that:
       - item.collation is string
-    quiet: yes
+    quiet: true
   loop: "{{ mysql_databases }}"
   loop_control:
     label: "{{ item.name }}"
@@ -93,7 +93,7 @@
   ansible.builtin.assert:
     that:
       - item.name is string
-    quiet: yes
+    quiet: true
   loop: "{{ mysql_users }}"
   loop_control:
     label: "{{ item.name }}"
@@ -104,7 +104,7 @@
   ansible.builtin.assert:
     that:
       - item.password is string
-    quiet: yes
+    quiet: true
   loop: "{{ mysql_users }}"
   loop_control:
     label: "{{ item.name }}"
@@ -116,7 +116,7 @@
   ansible.builtin.assert:
     that:
       - item.priv is string
-    quiet: yes
+    quiet: true
   loop: "{{ mysql_users }}"
   loop_control:
     label: "{{ item.name }}"
@@ -128,7 +128,7 @@
   ansible.builtin.assert:
     that:
       - item.name is string
-    quiet: yes
+    quiet: true
   loop: "{{ mysql_users }}"
   loop_control:
     label: "{{ item.name }}"
@@ -140,7 +140,7 @@
   ansible.builtin.assert:
     that:
       - item.host_all is boolean
-    quiet: yes
+    quiet: true
   loop: "{{ mysql_users }}"
   loop_control:
     label: "{{ item.name }}"
@@ -153,7 +153,7 @@
     that:
       - item.update_password is string
       - item.update_password in [ "always", "on_create" ]
-    quiet: yes
+    quiet: true
   loop: "{{ mysql_users }}"
   loop_control:
     label: "{{ item.name }}"
