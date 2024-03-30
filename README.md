@@ -64,7 +64,21 @@ mysql_innodb_buffer_pool_size: 1G
 
 # The io capacity.
 mysql_innodb_io_capacity: 4000
-```
+
+# The mysql configuration options
+mysql_configuration_options:
+  - option: bind-address
+    section: mysqld
+    value: "{{ mysql_bind_address }}"
+  - option: socket
+    section: mysqld
+    value: "{{ mysql_socket }}"
+  - option: innodb_buffer_pool_size
+    section: mysqld
+    value: "{{ mysql_innodb_buffer_pool_size }}"
+  - option: innodb_io_capacity
+    section: mysqld
+    value: "{{ mysql_innodb_io_capacity }}"```
 
 ## [Requirements](#requirements)
 
@@ -92,12 +106,12 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 
 |container|tags|
 |---------|----|
-|[Debian](https://hub.docker.com/repository/docker/buluma/debian/general)|bullseye|
-|[EL](https://hub.docker.com/repository/docker/buluma/enterpriselinux/general)|8|
-|[Fedora](https://hub.docker.com/repository/docker/buluma/fedora/general)|all|
-|[opensuse](https://hub.docker.com/repository/docker/buluma/opensuse/general)|all|
-|[Ubuntu](https://hub.docker.com/repository/docker/buluma/ubuntu/general)|all|
-|[Kali](https://hub.docker.com/repository/docker/buluma/kali/general)|all|
+|[Debian](https://hub.docker.com/r/buluma/debian)|bullseye|
+|[EL](https://hub.docker.com/r/buluma/enterpriselinux)|8|
+|[Fedora](https://hub.docker.com/r/buluma/fedora)|all|
+|[opensuse](https://hub.docker.com/r/buluma/opensuse)|all|
+|[Ubuntu](https://hub.docker.com/r/buluma/ubuntu)|all|
+|[Kali](https://hub.docker.com/r/buluma/kali)|all|
 
 The minimum version of Ansible required is 2.12, tests have been done to:
 
@@ -118,4 +132,3 @@ If you find issues, please register them in [GitHub](https://github.com/buluma/a
 ## [Author Information](#author-information)
 
 [Shadow Walker](https://buluma.github.io/)
-
