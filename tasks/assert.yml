@@ -160,3 +160,9 @@
   when:
     - mysql_users is defined
     - item.update_password is defined
+
+- name: assert | Test mysql_configuration_options is set correctly
+  ansible.builtin.assert:
+    that:
+      - mysql_configuration_options is defined
+    quiet: yes
