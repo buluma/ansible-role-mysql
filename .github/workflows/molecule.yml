@@ -50,6 +50,8 @@ jobs:
             tag: "bullseye"
           - image: "enterpriselinux"
             tag: "8"
+          - image: "enterpriselinux"
+            tag: "latest"
           - image: "docker-molecule-images"
             tag: "37"
           - image: "docker-molecule-images"
@@ -83,7 +85,6 @@ jobs:
           image: ${{ matrix.config.image }}
           tag: ${{ matrix.config.tag }}
       - name: Running Role Test
-        if: github.ref == 'refs/heads/master'
         run: ansible-galaxy role import --api-key ${{ secrets.galaxy_api_key }} buluma ${{ github.event.repository.name }}
 
   dependabot:

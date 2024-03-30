@@ -78,7 +78,8 @@ mysql_configuration_options:
     value: "{{ mysql_innodb_buffer_pool_size }}"
   - option: innodb_io_capacity
     section: mysqld
-    value: "{{ mysql_innodb_io_capacity }}"```
+    value: "{{ mysql_innodb_io_capacity }}"
+```
 
 ## [Requirements](#requirements)
 
@@ -107,7 +108,7 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 |container|tags|
 |---------|----|
 |[Debian](https://hub.docker.com/r/buluma/debian)|bullseye|
-|[EL](https://hub.docker.com/r/buluma/enterpriselinux)|8|
+|[EL](https://hub.docker.com/r/buluma/enterpriselinux)|8, 9|
 |[Fedora](https://hub.docker.com/r/buluma/fedora)|all|
 |[opensuse](https://hub.docker.com/r/buluma/opensuse)|all|
 |[Ubuntu](https://hub.docker.com/r/buluma/ubuntu)|all|
