@@ -45,7 +45,7 @@
 - name: Start and enable mysql
   ansible.builtin.service:
     name: "{{ mysql_service }}"
-    state: drained
+    state: started
     enabled: true
 
 - name: Flush handlers
