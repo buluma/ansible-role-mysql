@@ -64,7 +64,21 @@ mysql_innodb_buffer_pool_size: 1G
 
 # The io capacity.
 mysql_innodb_io_capacity: 4000
-```
+
+# The mysql configuration options
+mysql_configuration_options:
+  - option: bind-address
+    section: mysqld
+    value: "{{ mysql_bind_address }}"
+  - option: socket
+    section: mysqld
+    value: "{{ mysql_socket }}"
+  - option: innodb_buffer_pool_size
+    section: mysqld
+    value: "{{ mysql_innodb_buffer_pool_size }}"
+  - option: innodb_io_capacity
+    section: mysqld
+    value: "{{ mysql_innodb_io_capacity }}"```
 
 ## [Requirements](#requirements)
 
