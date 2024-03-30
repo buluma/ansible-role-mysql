@@ -42,18 +42,18 @@
   when:
     - ansible_distribution in [ "Alpine", "Archlinux" ]
 
-# - name: Start and enable mysql
-#   ansible.builtin.service:
-#     name: "{{ mysql_service }}"
-#     state: started
-#     enabled: true
+- name: Start and enable mysql
+  ansible.builtin.service:
+    name: "{{ mysql_service }}"
+    state: started
+    enabled: true
 
-- name: Wait for service "{{ mysql_service }}" to be running
-  service_facts:
-  register: result
-  until: result.ansible_facts.services[{{ mysql_service }}].state == 'started'
-  retries: 10
-  delay: 5
+# - name: Wait for service "{{ mysql_service }}" to be running
+#   service_facts:
+#   register: result
+#   until: result.ansible_facts.services[{{ mysql_service }}].state == 'started'
+#   retries: 10
+#   delay: 5
 
 - name: Flush handlers
   ansible.builtin.meta: flush_handlers
