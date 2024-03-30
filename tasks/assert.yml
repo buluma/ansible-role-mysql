@@ -29,6 +29,7 @@
     that:
       - mysql_innodb_io_capacity is defined
       - mysql_innodb_io_capacity is number
+      - mysql_innodb_io_capacity is integer
     quiet: true
 
 - name: assert | Test item.name item in mysql_databases
