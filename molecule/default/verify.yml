@@ -8,6 +8,7 @@
 
   roles:
     - role: ansible-role-mysql
+      mysql_port: 3307
       mysql_users:
         - name: my_user
       mysql_databases:
@@ -45,7 +46,6 @@
         login_password: "{{ mysql_root_password }}"
 
   handlers:
-
     - name: Remove netstat
       ansible.builtin.package:
         name: "{{ netstat_package }}"

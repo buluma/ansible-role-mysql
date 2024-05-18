@@ -8,6 +8,15 @@
       - mysql_bind_address is not none
     quiet: true
 
+- name: assert | Test mysql_port
+  ansible.builtin.assert:
+    that:
+      - mysql_port is defined
+      - mysql_port is number
+      - mysql_port > 1
+      - mysql_port < 65536
+    quiet: true
+
 - name: assert | Test mysql_root_password
   ansible.builtin.assert:
     that:
@@ -29,7 +38,6 @@
     that:
       - mysql_innodb_io_capacity is defined
       - mysql_innodb_io_capacity is number
-      - mysql_innodb_io_capacity is integer
     quiet: true
 
 - name: assert | Test item.name item in mysql_databases
@@ -172,9 +180,3 @@
   when:
     - mysql_users is defined
     - item.update_password is defined
-
-- name: assert | Test mysql_configuration_options is set correctly
-  ansible.builtin.assert:
-    that:
-      - mysql_configuration_options is defined
-    quiet: true

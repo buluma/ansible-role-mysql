@@ -19,6 +19,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 
   roles:
     - role: buluma.mysql
+      mysql_port: 3307
       mysql_databases:
         - name: my_db
           encoding: utf8
@@ -56,6 +57,9 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 # The address mysql should bind to.
 mysql_bind_address: "127.0.0.1"
 
+# The port to listen on.
+mysql_port: 3306
+
 # The password to set for the root user. Also stored in my.cnf
 mysql_root_password: "s3Cur31t4."
 
@@ -65,20 +69,30 @@ mysql_innodb_buffer_pool_size: 1G
 # The io capacity.
 mysql_innodb_io_capacity: 4000
 
-# The mysql configuration options
+# You can set the mysql(d) options here.
+# As this is a list, it's difficult to merge with another list.
+# This means you'd have to redefine the entire list and append
+# your options to it.
 mysql_configuration_options:
   - option: bind-address
     section: mysqld
     value: "{{ mysql_bind_address }}"
+  - option: port
+    section: mysqld
+    value: "{{ mysql_port }}"
   - option: socket
     section: mysqld
     value: "{{ mysql_socket }}"
-  - option: innodb_buffer_pool_size
-    section: mysqld
+  - section: mysqld
+    option: innodb_buffer_pool_size
     value: "{{ mysql_innodb_buffer_pool_size }}"
-  - option: innodb_io_capacity
-    section: mysqld
-    value: "{{ mysql_innodb_io_capacity }}"```
+  - section: mysqld
+    option: innodb_io_capacity
+    value: "{{ mysql_innodb_io_capacity }}"
+  - section: mysqld
+    option: log-bin-trust-function-creators
+    value: "1"
+```
 
 ## [Requirements](#requirements)
 
@@ -107,11 +121,10 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 |container|tags|
 |---------|----|
 |[Debian](https://hub.docker.com/r/buluma/debian)|bullseye|
-|[EL](https://hub.docker.com/r/buluma/enterpriselinux)|8|
+|[EL](https://hub.docker.com/r/buluma/enterpriselinux)|8, 9|
 |[Fedora](https://hub.docker.com/r/buluma/fedora)|all|
 |[opensuse](https://hub.docker.com/r/buluma/opensuse)|all|
 |[Ubuntu](https://hub.docker.com/r/buluma/ubuntu)|all|
-|[Kali](https://hub.docker.com/r/buluma/kali)|all|
 
 The minimum version of Ansible required is 2.12, tests have been done to:
 
