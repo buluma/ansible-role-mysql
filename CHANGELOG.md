@@ -51,6 +51,7 @@
 
 - set concurrency [\#14](https://github.com/buluma/ansible-role-mysql/pull/14) ([buluma](https://github.com/buluma))
 - Bump actions/checkout from 2.4.0 to 3 [\#13](https://github.com/buluma/ansible-role-mysql/pull/13) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump buluma/galaxy-action from 1.0.1 to 1.1.0 [\#2](https://github.com/buluma/ansible-role-mysql/pull/2) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [1.0.4](https://github.com/buluma/ansible-role-mysql/tree/1.0.4) (2022-02-12)
 
@@ -95,7 +96,6 @@
 
 **Merged pull requests:**
 
-- Bump buluma/galaxy-action from 1.0.1 to 1.1.0 [\#2](https://github.com/buluma/ansible-role-mysql/pull/2) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump alstr/todo-to-issue-action from 2.3 to 4.5.4 [\#1](https://github.com/buluma/ansible-role-mysql/pull/1) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 
