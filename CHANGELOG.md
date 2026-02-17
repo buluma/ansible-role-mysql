@@ -4,6 +4,11 @@
 
 [Full Changelog](https://github.com/buluma/ansible-role-mysql/compare/1.1.0...HEAD)
 
+**Closed issues:**
+
+- Update action [\#26](https://github.com/buluma/ansible-role-mysql/issues/26)
+- rebuild action [\#25](https://github.com/buluma/ansible-role-mysql/issues/25)
+
 **Merged pull requests:**
 
 - feature/add-rhel-9-support and make-options-configurable [\#32](https://github.com/buluma/ansible-role-mysql/pull/32) ([starfoxx82](https://github.com/starfoxx82))
