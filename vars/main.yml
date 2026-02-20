@@ -38,7 +38,8 @@ _mysql_packages:
   RedHat:
     - "{{ mysql_name }}-server"
     - python3-PyMySQL
-mysql_packages: "{{ _mysql_packages[ansible_os_family ~ '-' ~ ansible_distribution_major_version] | default(_mysql_packages[ansible_os_family] | default(_mysql_packages['default'] )) }}"
+mysql_packages: "{{ _mysql_packages[ansible_os_family ~ '-' ~ ansible_distribution_major_version] | default(_mysql_packages[ansible_os_family] | default(_mysql_packages['default']
+  )) }}"
 
 _mysql_initialize_command:
   Alpine: /etc/init.d/mariadb setup

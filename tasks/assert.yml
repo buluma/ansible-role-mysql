@@ -1,5 +1,4 @@
 ---
-
 - name: assert | Test mysql_bind_address
   ansible.builtin.assert:
     that:
