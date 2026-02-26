@@ -74,24 +74,24 @@ mysql_innodb_io_capacity: 4000
 # This means you'd have to redefine the entire list and append
 # your options to it.
 mysql_configuration_options:
-- option: bind-address
-  section: mysqld
-  value: "{{ mysql_bind_address }}"
-- option: port
-  section: mysqld
-  value: "{{ mysql_port }}"
-- option: socket
-  section: mysqld
-  value: "{{ mysql_socket }}"
-- section: mysqld
-  option: innodb_buffer_pool_size
-  value: "{{ mysql_innodb_buffer_pool_size }}"
-- section: mysqld
-  option: innodb_io_capacity
-  value: "{{ mysql_innodb_io_capacity }}"
-- section: mysqld
-  option: log-bin-trust-function-creators
-  value: "1"
+  - option: bind-address
+    section: mysqld
+    value: "{{ mysql_bind_address }}"
+  - option: port
+    section: mysqld
+    value: "{{ mysql_port }}"
+  - option: socket
+    section: mysqld
+    value: "{{ mysql_socket }}"
+  - section: mysqld
+    option: innodb_buffer_pool_size
+    value: "{{ mysql_innodb_buffer_pool_size }}"
+  - section: mysqld
+    option: innodb_io_capacity
+    value: "{{ mysql_innodb_io_capacity }}"
+  - section: mysqld
+    option: log-bin-trust-function-creators
+    value: "1"
 ```
 
 ## [Requirements](#requirements)
