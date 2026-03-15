@@ -11,6 +11,7 @@
 
 **Merged pull requests:**
 
+- Bump docker/setup-buildx-action from 3 to 4 [\#37](https://github.com/buluma/ansible-role-mysql/pull/37) ([dependabot[bot]](https://github.com/apps/dependabot))
 - feature/add-rhel-9-support and make-options-configurable [\#32](https://github.com/buluma/ansible-role-mysql/pull/32) ([starfoxx82](https://github.com/starfoxx82))
 - Bump release-drafter/release-drafter from 5 to 6 [\#29](https://github.com/buluma/ansible-role-mysql/pull/29) ([dependabot[bot]](https://github.com/apps/dependabot))
 
