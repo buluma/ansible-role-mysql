@@ -21,7 +21,7 @@
       default: net-tools
       Suse: net-tools-deprecated
     netstat_package:
-      "{{ _netstat_package[ansible_facts.os_family] | default(_netstat_package['default'])
+      "{{ _netstat_package[ansible_facts['os_family']] | default(_netstat_package['default'])
       }}"
 
   tasks:
