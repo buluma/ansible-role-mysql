@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-mysql/tree/HEAD)
+## [26.6.0](https://github.com/buluma/ansible-role-mysql/tree/26.6.0) (2026-06-14)
 
-[Full Changelog](https://github.com/buluma/ansible-role-mysql/compare/1.1.0...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-mysql/compare/1.1.0...26.6.0)
 
 **Closed issues:**
 
