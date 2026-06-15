@@ -59,7 +59,7 @@
     mode: "0640"
 
 - name: Create databases
-  community.mysql.mysql_db:
+  ansible.mysql.mysql_db:
     name: "{{ item.name }}"
     state: "{{ item.state | default('present') }}"
     target: "{{ item.target | default(omit) }}"
@@ -76,7 +76,7 @@
   no_log: true
 
 - name: Create users
-  community.mysql.mysql_user:
+  ansible.mysql.mysql_user:
     name: "{{ item.name }}"
     state: present
     password: "{{ item.password | default(omit) }}"
